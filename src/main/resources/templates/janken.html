@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Janken</title>
+</head>
+
+<body>
+  <h1>Janken GAME!</h1>
+
+  <script>
+    // URLパラメータからユーザ名を取得
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+
+    // ユーザ名を表示
+    if (username) {
+      document.write("<p>Hi " + username + "</p>");
+    } else {
+      document.write("<p>ユーザ名がありません</p>");
+    }
+  </script>
+
+  <!-- ここにじゃんけんゲームのコンテンツを追加 -->
+</body>
+
+</html>
