@@ -11,6 +11,30 @@
 
   <p th:if="${username}">Hi! <span th:text="${username}"></span>
   </p>
+
+  <div>
+    <a href="/jankengame?hand=Gu">ぐー</a>
+    <a href="/jankengame?hand=Tyoki">ちょき</a>
+    <a href="/jankengame?hand=Pa">ぱー</a>
+  </div>
+
+  <div th:if="${result == 'Pa'}">
+    <p>あなたの手 Pa</p>
+    <p>相手の手 Gu</p>
+    <p>結果 You Win!</p>
+  </div>
+
+  <div th:if="${result == 'Tyoki'}">
+    <p>あなたの手 Tyoki</p>
+    <p>相手の手 Gu</p>
+    <p>結果 You Lose</p>
+  </div>
+
+  <div th:if="${result == 'Gu'}">
+      <p>あなたの手 Gu</p>
+      <p>相手の手 Gu</p>
+      <p>結果 Draw</p>
+  </div>
 </body>
 
 </html>
