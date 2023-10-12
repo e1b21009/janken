@@ -7,9 +7,17 @@
 </head>
 
 <body>
+  <a href="/logout">ログアウト</a>
   <h1>Janken GAME!</h1>
 
-  <p th:if="${username}">Hi! <span th:text="${username}"></span>
+  <div>
+    <p>エントリー</p>
+    <ul>
+      <li th:each="user : ${room.users}">[[${user}]]</li>
+    </ul>
+  </div>
+
+  <p th:if="${room.users}">Hi! [[${login_user}]]
   </p>
 
   <div>
